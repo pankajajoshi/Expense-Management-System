@@ -23,5 +23,28 @@
   justify-content: space-between;
   padding: 15px 20px;
   box-shadow: 0 0 3px gray;
-  
+
 }
+
+/* antd icons */
+
+.anticon svg{
+  font-size:20px;
+  cursor:pointer;
+
+}
+
+.active-icon{
+  color:black;
+}
+
+.inactive-icon{
+  color:green;
+}
+
+.switch-icons{
+  box-shadow:1px solid rgba(0, 0, 0, 0.678);
+  border-radius: 5px;
+  padding:10px 15px;
+}
+
