@@ -16,6 +16,7 @@ const HomePage = () => {
   const [selectedDate, setSelectedate] = useState([]);
   const [type, setType] = useState("all");
   const [viewData, setViewData] = useState("table");
+  const [editable, setEditable] = useState(null);
 
   //table data
   const columns = [
@@ -168,7 +169,7 @@ const HomePage = () => {
         )}
       </div>
       <Modal
-        title="Add Transection"
+        title={editable ? "Edit Transaction" : "Add Transection"}
         open={showModal}
         onCancel={() => setShowModal(false)}
         footer={false}
