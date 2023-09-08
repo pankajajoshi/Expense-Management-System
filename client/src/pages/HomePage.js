@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, message, Modal, Select, Table, DatePicker } from "antd";
-import { UnorderedListOutlined, AreaChartOutlined } from "@ant-design/icons";
+import {
+  UnorderedListOutlined,
+  AreaChartOutlined,
+  EditOutlined,
+  DeleteOutlined,
+} from "@ant-design/icons";
 import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import Spinner from "./../components/Spinner";
@@ -76,16 +81,30 @@ const HomePage = () => {
           selectedDate,
           type,
         });
-        setLoading(false);
         setAllTransection(res.data);
-        console.log(res.data);
+        setLoading(false);
       } catch (error) {
-        console.log(error);
         message.error("Ftech Issue With Tranction");
       }
     };
     getAllTransactions();
-  }, [frequency, selectedDate, type]);
+  }, [frequency, selectedDate, type, setAllTransection]);
+
+  //delete handler
+  const handleDelete = async (record) => {
+    try {
+      setLoading(true);
+      await axios.post("/transections/delete-transection", {
+        transacationId: record._id,
+      });
+      setLoading(false);
+      message.success("Transaction Deleted!");
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      message.error("unable to delete");
+    }
+  };
 
   // form handling
   const handleSubmit = async (values) => {
@@ -114,7 +133,7 @@ const HomePage = () => {
       setEditable(null);
     } catch (error) {
       setLoading(false);
-      message.error("Faild to add transection");
+      message.error("please fill all fields");
     }
   };
 
@@ -137,19 +156,13 @@ const HomePage = () => {
             />
           )}
         </div>
-        <div>
+        <div className="filter-tab ">
           <h6>Select Type</h6>
           <Select value={type} onChange={(values) => setType(values)}>
             <Select.Option value="all">ALL</Select.Option>
             <Select.Option value="income">INCOME</Select.Option>
             <Select.Option value="expense">EXPENSE</Select.Option>
           </Select>
-          {frequency === "custom" && (
-            <RangePicker
-              value={selectedDate}
-              onChange={(values) => setSelectedate(values)}
-            />
-          )}
         </div>
         <div className="switch-icons">
           <UnorderedListOutlined
@@ -193,7 +206,7 @@ const HomePage = () => {
           initialValues={editable}
         >
           <Form.Item label="Amount" name="amount">
-            <Input type="text" />
+            <Input type="text" required />
           </Form.Item>
           <Form.Item label="type" name="type">
             <Select>
@@ -218,10 +231,10 @@ const HomePage = () => {
             <Input type="date" />
           </Form.Item>
           <Form.Item label="Refrence" name="refrence">
-            <Input type="text" />
+            <Input type="text" required />
           </Form.Item>
           <Form.Item label="Description" name="description">
-            <Input type="text" />
+            <Input type="text" required />
           </Form.Item>
           <div className="d-flex justify-content-end">
             <button type="submit" className="btn btn-primary">

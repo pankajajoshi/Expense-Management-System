@@ -2,6 +2,8 @@ const express = require("express");
 const {
   addTransection,
   getAllTransection,
+  editTransection,
+  deleteTransection,
 } = require("../controllers/transectionCtrl");
 
 //router object

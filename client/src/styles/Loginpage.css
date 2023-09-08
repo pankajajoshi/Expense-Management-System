@@ -1,0 +1,52 @@
+.login-page {
+    height: 100vh !important;
+    width: 100vw !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: linear-gradient(to right,  #9bd7ee, #c2b38f, #dee670);
+    /* background-image: linear-gradient(to right, #c6fffc, #e8d5a8, #da79f7); */
+  transition: background-image 0.5s ease-in-out, transform 1s ease-in-out;
+}
+
+.login-page:hover {
+  background-image: linear-gradient(to right, #9bd7ee, #c2b38f, #dee670);
+  transform: scale(1.2);
+}
+
+  
+  .login-page h1 {
+  }
+  .login-form {
+    background-color: rgb(61, 131, 251);
+    margin-left: -15px;
+    padding: 30px;
+  }
+  
+  .login-form h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+    color: #344265;
+  }
+  
+  .login-form .ant-form-item-label label {
+    color: #344265 !important;
+  }
+  .login-form button {
+    background-color: #344265;
+    color: white;
+    outline: none;
+  }
+  .login-form button:hover {
+    background-color: black;
+    color: white;
+  }
+  .login-form a {
+    color: #344265 !important;
+  }
+  
+  .login-form a:hover {
+    color: black !important;
+  }
