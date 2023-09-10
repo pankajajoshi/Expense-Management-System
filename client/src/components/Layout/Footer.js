@@ -4,7 +4,10 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="bg-secondary text-dark p-4 d-flex align-items-center justify-content-center fixed-bottom">
+    <div
+      className="text-dark p-4 d-flex align-items-center justify-content-center fixed-bottom"
+      style={{ backgroundColor: "#6f4e37c9" }}
+    >
       <h6 className="text-center mb-0">All rights reserved &copy; PK</h6>
       <div className="d-flex ml-2">
         <a
