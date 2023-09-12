@@ -33,10 +33,10 @@
 
 <hr />
 
-<h2>Future Golas </h2>
+<h2>Future Goals </h2>
 <ul>
   <li>
-    To add download to dowload as a pdf 
+    To add download to download as a pdf 
   </li>
   <li>
     Expense Reminders and Alerts
