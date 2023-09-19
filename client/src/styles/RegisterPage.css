@@ -25,11 +25,11 @@
     margin-top: 10px;
     text-align: center;
     font-weight: bold;
-    color: #b87333;
+    color: #3c33b8;
   }
   
   .register-form a {
-    color: #b87333 !important;
+    color: #4033b8 !important;
   }
   
   .register-form a:hover {
@@ -37,13 +37,13 @@
   }
   
   .register-form button {
-    background-color: #b87333;
+    background-color: #3349b8;
     color: white;
   }
   
   .register-form input:focus {
-    border: 1px solid #b87333 !important;
-    color: #b87333;
+    border: 1px solid #3371b8 !important;
+    color: #3352b8;
   }
   .register-form button:hover {
     background-color: black;
