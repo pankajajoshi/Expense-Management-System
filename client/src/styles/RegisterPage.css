@@ -4,13 +4,15 @@
   align-items: center;
   justify-content: center;
   /* background-color: rgb(38, 70, 130); */
-  background-image: linear-gradient(to right, #c6fffc, #e8d5a8, #da79f7);
-  transition: background-image 0.5s ease-in-out, transform 1s ease-in-out;
+  background-image: linear-gradient(to right, #f5fffe, #c3f7f4, #a0f5da);
+  
 }
 
 .register-page:hover {
-  background-image: linear-gradient(to right, #da79f7, #e8d5a8, #c6fffc);
+  background-image: linear-gradient(to right, #e9fefb, #d4edeb, #c6fffc);
+  transition: background-image 0.5s ease-in-out, transform 1s ease-in-out; 
   transform: scale(1.2);
+ 
 }
   .register-form {
     background-color: #fff;

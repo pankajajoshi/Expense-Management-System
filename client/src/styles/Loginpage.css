@@ -5,13 +5,14 @@
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-image: linear-gradient(to right,  #9bd7ee, #c2b38f, #dee670);
+    background-image: linear-gradient(to right,  #e6f8ff, #fff5de, #fdffe5);
     /* background-image: linear-gradient(to right, #c6fffc, #e8d5a8, #da79f7); */
-  transition: background-image 0.5s ease-in-out, transform 1s ease-in-out;
+ 
 }
 
-.login-page:hover {
-  background-image: linear-gradient(to right, #9bd7ee, #c2b38f, #dee670);
+.login-page:hover{
+  background-image: linear-gradient(to right, #9bd7ee, #ccecb7, #70d6e6);
+  transition: background-image 1s ease-in-out, transform 1s ease-out;
   transform: scale(1.2);
 }
 
