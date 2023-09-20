@@ -33,6 +33,11 @@
 
 <hr />
 
+<h2>Project Plan on Figma</h2>
+https://www.figma.com/file/KUlg8zd2U3gW4AgLl8Lg8b/Expense-Monitor-Mern-Stack-Project?type=whiteboard&node-id=1%3A586&t=wMEVkpUezUmPLJcf-1
+
+<hr />
+
 <h2>Future Goals </h2>
 <ul>
   <li>
